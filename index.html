@@ -20,7 +20,7 @@
       line-height: 1.4;
     }
     
-    img#imagen-oculta {
+    audio {
       display: none;
     }
   </style>
@@ -32,18 +32,16 @@
   
   <button id="boton-imagen">Click acá bb <3</button>
   
-  <img id="imagen-oculta" src="imagen.jpg" alt="Cuando comimos en el centro">
+  <button id="boton-audio">Reprodúceme</button>
+  
+  <audio id="mi-audio" src="audio.mp3"></audio>
   
   <p>uwu</p>
   
   <script>
-    document.getElementById('boton-imagen').addEventListener('click', function() {
-      var imagen = document.getElementById('imagen-oculta');
-      if (imagen.style.display === 'none') {
-        imagen.style.display = 'block';
-      } else {
-        imagen.style.display = 'none';
-      }
+    document.getElementById('boton-audio').addEventListener('click', function() {
+      var audio = document.getElementById('mi-audio');
+      audio.play();
     });
   </script>
 </body>
