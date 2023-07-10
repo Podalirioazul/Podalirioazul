@@ -19,6 +19,10 @@
       color: #666;
       line-height: 1.4;
     }
+    
+    img#imagen-oculta {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -26,9 +30,21 @@
   
   <p>Página prueba mía y de mi novia</p>
   
-  <img src="imagen.jpg" alt="Cuando comimos en el centro">
+  <button id="boton-imagen">Click en mí</button>
+  
+  <img id="imagen-oculta" src="imagen.jpg" alt="Cuando comimos en el centro">
   
   <p>uwu</p>
+  
+  <script>
+    document.getElementById('boton-imagen').addEventListener('click', function() {
+      var imagen = document.getElementById('imagen-oculta');
+      if (imagen.style.display === 'none') {
+        imagen.style.display = 'block';
+      } else {
+        imagen.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
-
