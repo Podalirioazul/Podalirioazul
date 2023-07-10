@@ -20,7 +20,7 @@
       line-height: 1.4;
     }
     
-    audio {
+    img#imagen-oculta {
       display: none;
     }
   </style>
@@ -30,18 +30,20 @@
   
   <p>Página prueba mía y de mi novia</p>
   
-  <button id="boton-imagen">Click acá bb <3</button>
+  <button id="boton-imagen">Click en mí</button>
   
-  <button id="boton-audio">Reprodúceme</button>
-  
-  <audio id="mi-audio" src="audio.mp3"></audio>
+  <img id="imagen-oculta" src="imagen.jpg" alt="Cuando comimos en el centro">
   
   <p>uwu</p>
   
   <script>
-    document.getElementById('boton-audio').addEventListener('click', function() {
-      var audio = document.getElementById('mi-audio');
-      audio.play();
+    document.getElementById('boton-imagen').addEventListener('click', function() {
+      var imagen = document.getElementById('imagen-oculta');
+      if (imagen.style.display === 'none') {
+        imagen.style.display = 'block';
+      } else {
+        imagen.style.display = 'none';
+      }
     });
   </script>
 </body>
